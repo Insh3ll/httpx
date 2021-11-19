@@ -194,7 +194,11 @@ type Options struct {
 	HostMaxErrors             int
 	Stream                    bool
 	SkipDedupe                bool
+	
+	OnResult                  OnResultCallback
 }
+
+type OnResultCallback func(Result)
 
 // ParseOptions parses the command line options for application
 func ParseOptions() *Options {
