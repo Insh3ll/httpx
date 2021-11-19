@@ -579,6 +579,10 @@ func (r *Runner) RunEnumeration() {
 				//nolint:errcheck // this method needs a small refactor to reduce complexity
 				f.WriteString(row + "\n")
 			}
+			
+			if r.options.OnResult != nil {
+				r.options.OnResult(resp))
+			}
 		}
 	}(output)
 
