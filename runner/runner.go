@@ -581,7 +581,7 @@ func (r *Runner) RunEnumeration() {
 			}
 			
 			if r.options.OnResult != nil {
-				r.options.OnResult(resp))
+				r.options.OnResult(resp)
 			}
 		}
 	}(output)
